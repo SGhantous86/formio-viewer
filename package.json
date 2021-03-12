@@ -18,13 +18,14 @@
   },
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
+    "@formio/contrib": "^1.1.0",
+    "assetworks-contrib-library": "^1.0.59",
     "bootstrap": "^4.5.3",
     "bootswatch": "^4.5.3",
     "core-js": "^3.8.1",
     "flatpickr": "^4.6.6",
     "font-awesome": "^4.7.0",
     "formiojs": "^4.12.4-rc.2",
-    "fss-contrib-library": "^1.0.0",
     "seamless": "^1.4.1"
   },
   "devDependencies": {

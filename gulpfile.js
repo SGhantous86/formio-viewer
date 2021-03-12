@@ -14,6 +14,7 @@ gulp.task('seamless', () => gulp.src('./node_modules/seamless/build/**/*').pipe(
 gulp.task('bootstrap', () => gulp.src('./node_modules/bootstrap/dist/**/*').pipe(gulp.dest('dist/lib/bootstrap')));
 gulp.task('bootswatch', () => gulp.src('./node_modules/bootswatch/**/*').pipe(gulp.dest('dist/lib/bootswatch')));
 gulp.task('fa', () => gulp.src('./node_modules/font-awesome/**/*').pipe(gulp.dest('dist/lib/font-awesome')));
+gulp.task('contrib', () => gulp.src('./node_modules/assetworks-contrib-library/dist/assetworks-contrib.css').pipe(gulp.dest('dist/lib/contrib')));
 gulp.task('build', gulp.series('clean', gulp.parallel(
   'html',
   'assets',
@@ -22,7 +23,8 @@ gulp.task('build', gulp.series('clean', gulp.parallel(
   'seamless',
   'bootstrap',
   'bootswatch',
-  'fa')
+  'fa',
+  'contrib')
 ));
 gulp.task('deploy', function () {
   return gulp.src('./dist/**/*').pipe(plugins.s3(require('../formio-apps/aws.json'), {
